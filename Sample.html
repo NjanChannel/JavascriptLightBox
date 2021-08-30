@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title> NJan channel</title>
+    <script src="lightbox-plugin.js"></script>
+</head>
+
+<body>
+    <div>
+        Main content
+    </div>
+    <div id="placeholderContent0">
+        
+    </div>
+    <div id="placeholderContent1">
+    </div>
+    <style>
+        .showbtn-1{
+            background-color: burlywood;
+            color: red;
+            padding: 1%;
+        }
+        .showbtn-2{
+            background-color:green;
+            padding: 1%;
+        }
+        .lightbox-inner-customized-ctn{
+            background-color: darkblue;
+        }
+    </style>
+    <script>
+        document.getElementById("placeholderContent0").lightbox({
+            showBtnHtml:'Show lightbox',
+            showBtnClass:'showbtn-1',
+            bodyContentHtml:'<div style="color:red"> This is customized lightbox content</div>',
+            closeBtnCallback:function(){
+                console.log("lightbox closed");
+            }
+        });
+        document.getElementById("placeholderContent1").lightbox({
+            showBtnClass:'showbtn-2',
+            innerBoxClass:'lightbox-inner-customized-ctn'
+        });
+    </script>
+</body>
+
+</html>
